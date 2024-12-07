@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - Reimagine Truth</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>News Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
-<body class="bg-gray-900 text-gray-200">
-    <header class="bg-gray-800 p-4 text-center">
-        <h1 class="text-3xl font-bold">News</h1>
-        <a href="home.html" class="text-blue-400 hover:underline"><i class="fas fa-arrow-left mr-2"></i>Back to Home</a>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white font-sans">
+    <header class="bg-gray-800 p-4 text-white text-center">
+        <h1 class="text-3xl font-bold">Reimagine Truth - News Blog</h1>
     </header>
 
-    <main class="p-4">
-        <section class="bg-gray-800 p-6 rounded shadow-md">
-            <h2 class="text-2xl font-bold mb-4">Latest Updates</h2>
-            <ul class="space-y-4">
-                <li>
-                    <h3 class="text-xl font-semibold">Project Launch Date Announced</h3>
-                    <p>Reimagine Truth is launching on January 1, 2025. Get ready for the journey!</p>
-                </li>
-                <li>
-                    <h3 class="text-xl font-semibold">New NFT Collection Sneak Peek</h3>
-                    <p>Explore the upcoming Truth Seekers Deck with exciting new card types and rarities.</p>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <div class="container mx-auto p-6">
+        <!-- Posting Form -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-6">
+            <h3 class="text-xl font-semibold mb-4">Post a News Update</h3>
+            <form id="newsForm">
+                <input class="w-full mb-4 p-2 border border-gray-300 rounded" id="title" placeholder="Enter title" required>
+                <textarea class="w-full mb-4 p-2 border border-gray-300 rounded" id="content" placeholder="Write your content here..." rows="5" required></textarea>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" type="submit">Post</button>
+            </form>
+        </div>
 
-    <footer class="bg-gray-800 p-4 text-center">
+        <!-- News Posts -->
+        <div id="newsPosts" class="space-y-6">
+            <!-- News posts will be dynamically added here -->
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 p-4 text-center text-white">
         <p>© 2024 Reimagine Truth. All rights reserved.</p>
     </footer>
 </body>
